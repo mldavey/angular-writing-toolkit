@@ -1,0 +1,34 @@
+<div class="container" ng-controller="CalculateController">
+	<h1>Word Count Calculator</h1>
+
+	<form>
+		<div class="form-group">
+			<label>
+				Target Total:
+				<input type="text" name="targetTotal" id="targetTotal" ng-model="targetTotal" />
+			</label>
+		</div>
+
+		<div class="form-group">
+			<label>
+				Current Total:
+				<input type="text" name="currentTotal" id="currentTotal" ng-model="currentTotal" />
+			</label>
+		</div>
+
+		<p><strong>Remaining Words:</strong> {{ remainingTotal | number }}</p>
+
+		<div class="form-group">
+			<label>
+				How Many Days Left?
+				<input type="text" name="daysLeft" id="daysLeft" ng-model="daysLeft" />
+			</label>
+		</div>
+
+		<p>You would have to write about {{ wordsPerDay | number }} words to finish within {{ daysLeft }} days.</p>
+
+
+		<button ng-click="calculateRemaining()">Calculate</button>
+	</form>
+
+</div> <!--/ container -->

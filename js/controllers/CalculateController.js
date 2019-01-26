@@ -1,4 +1,4 @@
-app.controller('MainController', ['$scope', function($scope) {
+app.controller('CalculateController', ['$scope', function($scope) {
 	
 	$scope.targetTotal = 0;
 	$scope.currentTotal = 0;
